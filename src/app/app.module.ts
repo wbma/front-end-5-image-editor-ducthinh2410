@@ -4,17 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CanvasComponent } from './canvas/canvas.component';
+import {ImageService} from "./services/image.service";
+import { FileComponent } from './file/file.component';
+import { BrightContrastComponent } from './bright-contrast/bright-contrast.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CanvasComponent,
+    FileComponent,
+    BrightContrastComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
