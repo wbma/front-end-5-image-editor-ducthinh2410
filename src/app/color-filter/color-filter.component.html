@@ -10,4 +10,4 @@ Blue:
 <input type="range" min="0" max="255" [(ngModel)]="blue">
 <br>
 Strength:
-<input type="range" min="0" max="100" [(ngModel)]="strength">{{ strength }}
+<input type="range" min="0" max="100" [(ngModel)]="strength" (change)="this.imageService.applyFilters()">{{ strength }}

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ImageService} from "../services/image.service";
 
 @Component({
   selector: 'app-color-filter',
@@ -12,7 +13,7 @@ export class ColorFilterComponent implements OnInit {
   private blue = 0;
   private strength = 0;
 
-  constructor() {
+  constructor(private imageService: ImageService) {
   }
 
   ngOnInit() {
