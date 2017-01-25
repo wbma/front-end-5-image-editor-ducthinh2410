@@ -16,13 +16,7 @@ export class BrightContrastComponent implements OnInit {
 
 
   private brightContrast = () => {
-    //this.contrast = parseInt(this.contrast);
-    //this.brightness = parseInt(this.brightness);
-    for (var i = 0; i < this.imageService.numPixels; i++) {
-      this.imageService.pixels[i * 4] = (this.imageService.pixels[i * 4] - 128) * this.contrast + 128 + this.brightness; // Red
-      this.imageService.pixels[i * 4 + 1] = (this.imageService.pixels[i * 4 + 1] - 128) * this.contrast + 128 + this.brightness; // Green
-      this.imageService.pixels[i * 4 + 2] = (this.imageService.pixels[i * 4 + 2] - 128) * this.contrast + 128 + this.brightness; // Blue
-    }
+    // change brighness and contrast
 
     this.imageService.context.clearRect(0, 0, this.imageService.canvas.width, this.imageService.canvas.height);
     this.imageService.context.putImageData(this.imageService.imageData, 0, 0);
@@ -30,7 +24,8 @@ export class BrightContrastComponent implements OnInit {
   };
 
   ngOnInit() {
-    this.imageService.functions.brightContrast = this.brightContrast;
+    // Uncomment the following
+    // this.imageService.functions.brightContrast = this.brightContrast;
   }
 
 }
