@@ -25,7 +25,7 @@ export class BrightContrastComponent implements OnInit {
 
   ngOnInit() {
     // Uncomment the following
-    // this.imageService.functions.brightContrast = this.brightContrast;
+    //this.imageService.functions.brightContrast = this.brightContrast;
   }
 
 }
